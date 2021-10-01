@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <title>Genetic Pixels</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="canvas-container">
+    <div class="canvas">
+      <canvas id="world-canvas" width="256" height="256"></canvas>
+      <div class="canvas-label">World</div>
+    </div>
+    <div class="canvas">
+      <canvas id="highlight-canvas" width="256" height="256"></canvas>
+      <div class="canvas-label">Behavior of reproduction DNA</div>
+    </div>
+  </div>
+  <div class="stats-and-settings">
+    <div class="stats">
+      <table>
+        <tr>
+          <td>Organisms</td>
+          <td id="stat-organisms"></td>
+        </tr>
+        <tr>
+          <td>Food</td>
+          <td id="stat-food"></td>
+        </tr>
+        <tr>
+          <td>Age of oldest organism still alive</td>
+          <td id="stat-oldest-living"></td>
+        </tr>
+        <tr>
+          <td>Age of oldest organism that ever lived</td>
+          <td id="stat-oldest-ever"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="settings">
+      <table>
+        <tr>
+          <td>DNA Mutation rate</td>
+          <td><input type="text" class="input-setting" id="config-input-dnaMutationRate"></td>
+        </tr>
+        <tr>
+          <td>DNA CutAndReplace-rate</td>
+          <td><input type="text" class="input-setting" id="config-input-dnaCutAndReplaceRate"></td>
+        </tr>
+        <tr>
+          <td>DNA length</td>
+          <td><input type="text" class="input-setting" id="config-input-dnaLength"></td>
+        </tr>
+        <tr>
+          <td>Max food</td>
+          <td><input type="text" class="input-setting" id="config-input-maxFood"></td>
+        </tr>
+        <tr>
+          <td>Max organisms</td>
+          <td><input type="text" class="input-setting" id="config-input-maxOrganisms"></td>
+        </tr>
+        <tr>
+          <td>Organisms die after steps without food</td>
+          <td><input type="text" class="input-setting" id="config-input-maxHunger"></td>
+        </tr>
+        <tr>
+          <td>Organisms line of sight (in pixels)</td>
+          <td><input type="text" class="input-setting" id="config-input-lineOfSight"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="dna-containers">
+    <div class="reproduction-dna">
+      <textarea id="reproduction-dna-input" disabled></textarea>
+      <div>DNA used for reproduction - updates when a new organism becomes the oldest that ever lived</div>
+    </div>
+    <div class="initial-dna">
+      <textarea id="initial-dna-input"></textarea>
+      <div>DNA used for initial population upon reset</div>
+    </div>
+  </div>
+  <button id="reset-button">Reset</button>
+</div>
+<script src="main.ts" type="module"></script>
+</body>
+
+</html>
