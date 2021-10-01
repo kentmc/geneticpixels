@@ -1,0 +1,89 @@
+.container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.canvas-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.canvas {
+  text-align: center;
+  max-width: 48%;
+}
+
+.canvas-label {
+  margin-top: 10px;
+  height: 40px;
+}
+
+canvas {
+  width: 512px;
+  background-color: #000;
+  max-width: 100%;
+}
+
+.stats, .actions {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-canvas {
+  border-left: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  top: 0;
+}
+
+.world-canvas {
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  top: 0;
+}
+
+.reproduction-dna, .initial-dna {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.reproduction-dna textarea, .initial-dna textarea {
+  width: 80%;
+  height: 150px;
+}
+
+.stats-and-settings {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.dna-containers {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#reset-button {
+  margin-bottom: 40px;
+}
